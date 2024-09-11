@@ -1,7 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
+@font-face {
+	font-family: 'Curlz MT';
+	src: url("fonts/Curlz MT.TTF")
+}
 h1 {
-  font-family: 'Curlz MT', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"
+  font-family: 'Curlz MT', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
 }
         .content-wrapper {
             display: flex;
