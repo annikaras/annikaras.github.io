@@ -6,7 +6,7 @@
 		url(fonts/Curlz MT.woff) format('woff');
 }
 h1 {
-  font-family: 'Curlz MT', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";s
+  font-family: 'Curlz MT', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
 }
         .content-wrapper {
             display: flex;
