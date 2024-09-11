@@ -8,6 +8,7 @@ h1 {
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
+			  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
         }
 
         .pink-table {
@@ -42,34 +43,21 @@ h1 {
                 max-width: 100px;
             }
         }
-
-.glitter {
+.emoji {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Makes elements non-interactive */
+  font-size: 32px; /* Adjust size as needed */
+	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  animation: bounce 2s ease-in-out infinite;
 }
 
-.glitter span {
-  position: absolute;
-  font-size: 12px; /* Adjust size as needed */
-  color: #0081FF;
-  animation: glitter 3s linear infinite;
-}
-
-@keyframes glitter {
+@keyframes bounce {
   0% {
-    transform: translateX(-100%) translateY(-100%) rotate(0deg);
-    opacity: 0;
+    transform: translateY(0);
   }
   50% {
-    transform: translateX(100%) translateY(100%) rotate(360deg);
-    opacity: 1;
+    transform: translateY(-20px);
   }
   100% {
-    transform: translateX(-100%) translateY(-100%) rotate(720deg);
-    opacity: 0;
+    transform: translateY(0);
   }
 }

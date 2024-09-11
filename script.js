@@ -1,20 +1,20 @@
-function createGlitter() {
-  const glitter = document.createElement('div');
-  glitter.classList.add('glitter');
+const contentWrapper = document.querySelector('.content-wrapper');
+const emojis = ['😊', '😄', '😁', '😂', '🤣', '🤩', '😍', '🥰', '😘', '🤗']; // Add more emojis as needed
 
-  const size = Math.random() * 20 + 5; // Random size between 5 and 25 pixels
-  glitter.style.width = `${size}px`;
-  glitter.style.height = `${size}px`;
+function createEmoji() {
+  const emojiElement = document.createElement('div');
+  emojiElement.classList.add('emoji');
 
-  const top = Math.random() * window.innerHeight; // Random top position
-  const left = Math.random() * window.innerWidth; // Random left position
-  glitter.style.top = `${top}px`;
-  glitter.style.left = `${left}px`;
+  const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+  emojiElement.textContent = randomEmoji;
 
-  const duration = Math.random() * 5 + 2; // Random duration between 2 and 7 seconds
-  glitter.style.animation = `fall ${duration}s linear infinite`;
+  contentWrapper.appendChild(emojiElement);
 
-  document.body.appendChild(glitter);
+  // Randomize position and animation speed
+  emojiElement.style.left = Math.random() * 100 + '%';
+  emojiElement.style.top = Math.random() * 100 + '%';
+  emojiElement.style.animation = `bounce ${Math.random() * 2 + 1}s ease-in-out infinite`;
 }
 
-setInterval(createGlitter, 100); // Create glitter every 100 milliseconds
+createEmoji(); // Create initial emoji
+setInterval(createEmoji, 1000); // Create new emoji every second
