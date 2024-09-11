@@ -5,7 +5,7 @@
 	src: url("fonts/Curlz MT.ttf")
 }
 h1 {
-  font-family: 'Curlz MT', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+  font-family: 'Curlz MT', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";s
 }
         .content-wrapper {
             display: flex;
