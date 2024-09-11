@@ -2,8 +2,8 @@
 /* CSS Document */
 @font-face {
 	font-family: 'Curlz MT';
-	src: url('fonts/Curlz MT.ttf') format('truetype'),
-	url('fonts/Curlz MT.woff') format('woff');
+	src: url('fonts/CurlzMT.ttf') format('truetype'),
+	url('fonts/CurlzMT.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
