@@ -3,3 +3,42 @@
 h1 {
   font-family: 'Curlz MT', Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif"
 }
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pink-table {
+            background-color: #FCE1F2;
+            color: black;
+            padding: 10px;
+            border: 20px solid #1ACFE5;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .image-gallery img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-gallery img {
+                max-width: 100px;
+            }
+        }
