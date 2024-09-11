@@ -42,3 +42,34 @@ h1 {
                 max-width: 100px;
             }
         }
+
+.glitter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Makes elements non-interactive */
+}
+
+.glitter span {
+  position: absolute;
+  font-size: 12px; /* Adjust size as needed */
+  color: #0081FF;
+  animation: glitter 3s linear infinite;
+}
+
+@keyframes glitter {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100%) translateY(100%) rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%) translateY(-100%) rotate(720deg);
+    opacity: 0;
+  }
+}
