@@ -29,3 +29,37 @@ const intervalId = setInterval(() => {
     clearInterval(intervalId); // Stop the interval when 150 emojis are created
   }
 }, 1000); 
+
+// MESSAGES
+// Get references to form elements
+const messageForm = document.getElementById('messageForm');
+const messageInput = document.getElementById('messageInput');
+const messageDisplay = document.getElementById('messageDisplay');
+
+// Function to display messages from local storage
+function displayMessages() {
+    const messages = JSON.parse(localStorage.getItem('messages')) || [];
+    messageDisplay.innerHTML = '<h3>Messages:</h3>';
+    messages.forEach((msg, index) => {
+        const messageElement = document.createElement('p');
+        messageElement.textContent = msg;
+        messageDisplay.appendChild(messageElement);
+    });
+}
+
+// Function to handle form submission
+messageForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const message = messageInput.value;
+
+    if (message) {
+        const messages = JSON.parse(localStorage.getItem('messages')) || [];
+        messages.push(message);
+        localStorage.setItem('messages', JSON.stringify(messages));
+        messageInput.value = ''; // Clear the input field
+        displayMessages(); // Update the displayed messages
+    }
+});
+
+// Display existing messages when page loads
+displayMessages();
