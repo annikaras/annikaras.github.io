@@ -7,6 +7,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+body {
+  background-image: url('images/Windows 10 Default Wallpaper.webp');
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
 h1 {
   font-family: 'Curlz MT', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
 }
@@ -36,7 +44,7 @@ h1 {
         .image-gallery img {
             max-width: 200px;
             height: auto;
-            border: 2px solid #ccc;
+            border: 2px solid #D100BF;
             border-radius: 8px;
         }
 
